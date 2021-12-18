@@ -135,9 +135,6 @@ mini.forward(100)      #object.method(parameter)
 mini.left(60)
 mini.forward(100)
 
-
-
-
 prity = turtle.Turtle()
 prity.color("green")
 arin.pensize(2)
