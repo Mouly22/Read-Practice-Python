@@ -17,13 +17,13 @@ sponge.backward(30)
 **Creating a Rectangle**
 
 ```
-import turtle                  #here loads a module named turtle
-#This module brings two new types: the Turtle type, and the Screen type.
-scrn = turtle.Screen()         #creates a graphics window
-#scrn is an instance of Screen class
-ciri = turtle.Turtle()         #means the Turtle type that is defined within the turtle module
-#ciri is an instance of Turtle class
-ciri.forward(180)           #object.method(parameter)
+import turtle                   #here loads a module named turtle
+                                #This module brings two new types: the Turtle type, and the Screen type.
+scrn = turtle.Screen()          #creates a graphics window
+                                #scrn is an instance of Screen class
+ciri = turtle.Turtle()          #means the Turtle type that is defined within the turtle module
+                                #ciri is an instance of Turtle class
+ciri.forward(180)               #object.method(parameter)
 ciri.left(90)             
 ciri.forward(75)         
 ciri.left(90)
