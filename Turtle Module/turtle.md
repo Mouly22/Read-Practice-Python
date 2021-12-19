@@ -1,6 +1,6 @@
 <h2> Turtle Module </h2>
 
-<h4>Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an import turtle, give it the command turtle.forward(200), and it moves (on-screen!) 200 pixels in the direction it is facing, drawing a line as it moves. Give it the command turtle.right(45), and it rotates in-place 45 degrees clockwise.By combining together these and similar commands, intricate shapes and pictures can easily be drawn.</h4>
+<h4>Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an import turtle, give it the command turtle.forward(200), and it moves (on-screen!) 200 pixels in the direction it is facing, drawing a line as it moves. Give it the command turtle.right(45), and it rotates in-place 45 degrees clockwise.By combining together these and similar commands, intricate shapes and pictures can easily be drawn.This is the concept we use in turtle module. </h4>
 
 **Turtle Graphics**
 
@@ -18,10 +18,13 @@ sponge.backward(30)
 ```
 
 ```
-Just like we can have many different integers in a program, we can have many turtles.Each of the turtle is an independent object and we call each one an instance of the Turtle type (class) and Each instance has its own attributes and methods 
+Just like we can have many different integers in a program, we can have many turtles.
+Each of the turtle is an independent object and we call each one an instance of the Turtle type (class), Each instance has its own attributes and methods 
 import turtle defines the module turtle which will allow you to create a Turtle object and draw with it.
 turtle.Turtle; here "turtle" tells Python that we are referring to the turtle module, which is where the object "Turtle" is found
 Geometry conventions have 0 degrees facing East and that is the case here too. 
+Each instance can have attributes, sometimes called instance variables
+sponge.forward(100) alex is an instance of the class Turtle.forward is a method.
 
 ``` 
 
@@ -157,4 +160,53 @@ scrn.exitonclick()                # wait for a user click on the canvas
 #we invoke its exitonclick method of scrn object, the program pauses execution 
 #and waits for the user to click the mouse somewhere in the window
 
+```
+
+**Using loops for repetitive patterns**
+
+```
+import turtle
+scrn = turtle.Screen()
+scrn.bgcolor("gray")
+mim = turtle.Turtle()
+mim.color("pink")
+mim.pensize(3)
+distance = 10
+for i in range(20):
+    mim.forward(distance)
+    mim.right(90)
+    distance = distance + 10
+
+nim = turtle.Turtle()
+nim.color("yellow")
+nim.pensize(2)
+distance = 9
+angle = 90
+for we in range(15):
+    nim.forward(distance)
+    nim.right(angle)
+    distance = distance + 10
+    angle = angle - 3
+
+scrn.exitonclick()
+```
+**Using turtle shape method**
+
+```
+import turtle
+scrn = turtle.Screen()
+scrn.bgcolor("lavender")
+xen = turtle.Turtle()
+xen.color("blue")
+xen.shape("turtle")
+
+x = 5
+xen.up()                     #Pull the pen up -- no drawing when moving
+for i in range(50):
+    xen.stamp()              #Stamp a copy of the turtleshape onto the canvas and return its id
+    xen.forward(x)
+    xen.right(25)
+    x += 2
+
+scrn.exitonclick()
 ```
