@@ -1,5 +1,7 @@
 <h2> Turtle Module </h2>
 
+<h4>Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an import turtle, give it the command turtle.forward(200), and it moves (on-screen!) 200 pixels in the direction it is facing, drawing a line as it moves. Give it the command turtle.right(45), and it rotates in-place 45 degrees clockwise.By combining together these and similar commands, intricate shapes and pictures can easily be drawn.</h4>
+
 **Turtle Graphics**
 
 ```
@@ -7,17 +9,20 @@ import turtle
 scrn = turtle.Screen()                  #creates a graphics window
 sponge = turtle.Turtle()                #creates a turtle whose name is sponge
 sponge.forward(200)                     #object.method(parameter)
-sponge.left(90)
+sponge.left(90)                         #turn turtle left by angle units
 sponge.forward(100)
-sponge.right(90)
+sponge.right(90)                        #turn turtle right by angle units
 sponge.forward(100)
 sponge.left(90)
 sponge.backward(30)
 ```
 
 ```
-#import turtle defines the module turtle which will allow you to create a Turtle object and draw with it.
-#turtle.Turtle; here "turtle" tells Python that we are referring to the turtle module, which is where the object "Turtle" is found
+Just like we can have many different integers in a program, we can have many turtles.Each of the turtle is an independent object and we call each one an instance of the Turtle type (class) and Each instance has its own attributes and methods 
+import turtle defines the module turtle which will allow you to create a Turtle object and draw with it.
+turtle.Turtle; here "turtle" tells Python that we are referring to the turtle module, which is where the object "Turtle" is found
+Geometry conventions have 0 degrees facing East and that is the case here too. 
+
 ``` 
 
 **Creating a Rectangle**
@@ -107,17 +112,16 @@ arin.color("blue")
 arin.pensize(3)
 #the object arin has property/attribute - color,pensize
 arin.forward(100)
-arin.right(90)                    #name.right(90) goes downward
+arin.right(90)                    
 arin.forward(90)
 
 arina = turtle.Turtle()
 arina.color("hot pink")
 arin.pensize(4)
 arina.forward(100)
-arina.left(90)                    #name.left(90) goes upward
+arina.left(90)                    
 arina.forward(90)
 
-#name.right(value)/name.left(value) works for defining angles(degrees).
 ciri = turtle.Turtle()
 ciri.color("yellow")
 ciri.forward(180)           #object.method(parameter)
@@ -146,7 +150,7 @@ prity.forward(100)
 zina = turtle.Turtle()
 zina.color("red")
 zina.pensize(3)
-zina.left(180)                   #notice this
+zina.left(180)                   #notice this.it will make the line go in opposite direction
 zina.forward(150)
 
 scrn.exitonclick()                # wait for a user click on the canvas
