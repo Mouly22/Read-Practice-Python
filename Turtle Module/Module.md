@@ -15,9 +15,10 @@ but you know which is which because of the folder it’s in; each folder has its
 Note that human names are not part of a namespace that enforces uniqueness; that’s why governments have invented unique identifiers to assign to people, 
 like passport numbers.
 
-In order to use Python modules, you have to import them into a Python program
+In order to use Python modules, you have to **import** them into a Python program
 
 When you see imported modules in a Python program, there are a few variations that have slightly different consequences.
+
 1)The most common is import morecode. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write morecode.f1().
 Note that you have to explicitly mention morecode again, to specify that you want the f1 function from the morecode namespace. 
 If you just write f1(), python will look for an f1 that was defined in the current file, rather than in morecode.py.
@@ -26,4 +27,5 @@ If you just write f1(), python will look for an f1 that was defined in the curre
 you would invoke f1 as mc.f1(). You have now given the morecode module the alias mc. Programmers often do this to make code easier to type.
 
 3)A third possibility for importing occurs when you only want to import SOME of the functionality from a module,and you want to make those objects be part of the current module’s namespace. 
+
 For example, you could write from morecode import f1. Then you could invoke f1 without referencing morecode again: f1().
