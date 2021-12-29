@@ -1,6 +1,8 @@
 <h2> String </h2>
 
-***Strings are what we use in python when working with words.*** Strings are either enclosed with single quotes or double quotes.Also we can write multi line string using triple qutations(single and double both)
+***Strings are what we use in python when working with words.*** 
+
+Strings are either enclosed with single quotes or double quotes.Also we can write multi line string using triple qutations(single and double both)
 So, we can use either single quotes or double quotes as long as we are consistant about which qutation we are using.
 ```
 my_name = "Hello! I am mouly"
@@ -128,7 +130,7 @@ Strings are sequential collection datatype.This means a string is actually a col
 ***Indexing***
 
 We can access a sub-string or part of a string using the indexing operator.
-This operator is handy for accessing a single character by it's position or ***index value***
+This operator is helpful for accessing a single character by it's position or ***index value***
 This index value for sequential collection datatypes always begins at ***zero***
 For example, string with six character have entities from 0 through 5. So if we want to access a 5th character of a string we'll use an index of 4.
 ```
