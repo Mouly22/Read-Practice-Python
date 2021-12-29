@@ -1,3 +1,5 @@
+<h2> String </h2>
+
 ***Strings are what we use in python when working with words.*** Strings are either enclosed with single quotes or double quotes.Also we can write multi line string using triple qutations(single and double both)
 So, we can use either single quotes or double quotes as long as we are consistant about which qutation we are using.
 ```
