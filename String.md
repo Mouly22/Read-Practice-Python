@@ -48,7 +48,7 @@ Output:
 
 
 ```
-***Type***
+<h4>Type</h4>
 
 this built-in fuction returns the type of an object
 ```
@@ -128,7 +128,7 @@ So, python can't convert this string into integer.
 
 Strings are sequential collection datatype.This means a string is actually a collection of single characters.
 
-***Indexing***
+<h4>Indexing</h4>
 
 We can access an individual character of a string or part of a string using the indexing operator.
 For accessing individual character by it's position or ***index value***. This index value always begins at ***zero***
@@ -188,8 +188,10 @@ Output:
 e
 e
 ```
-***Slicing***
+<h4>Slicing</h4>
+
 Slicing is used for getting a substring of a particular string.This allows us to create a sub-string that is more than one character long. Colon(:) is used as a slicing operator.
+
 ***Keep in mind*** that, the slice operator leaves the original operator intact.
 
 Basic structure of slicing
@@ -211,7 +213,7 @@ Output:
 e want t
 ```
 In this example,the colon used in this slicing operator will return the characters from index 1 upto index 8(so not including index 9) and the increment will be 1.
-***String Operators***
+<h4>String Operators</h4>
 <h3> Concatenation </h3>
 We can ***concatenate*** strings by using the plus(+) sign.
 ```
@@ -237,7 +239,7 @@ Output:
 ```
 repeat4timerepeat4timerepeat4timerepeat4time
 ```
-***Built-in methods***
+<h4>Built-in methods</h4>
 
 ***It's important to remember that, Python is IMMUTABLE.*** Immutable means once it has been created its value cannot be changed.
 So, each time we have to modify the values, we need to make a copy of the original one and make changes to the duplicate one.
@@ -253,7 +255,7 @@ Python has some built-in method to access or process characters in string.
 
 For example,
 
-***count(substring) method***
+<h4>count(substring) method</h4>
 we can use the count method to count the occurances of a particular substring.
 ```
 place = "I want to visit USA"
@@ -265,7 +267,7 @@ Output:
 ```
 As python is ***case-sensitive,*** we can't access I here cause the ASCII value of I is different than i***
 
-***index(substring) method***
+<h4>index(substring) method</h4>
 
 we can use the index method to find the index of the ***first occurance*** of a given substring.
 ```
@@ -276,7 +278,7 @@ Output:
 ```
 11
 ```
-***Upper() and lower() method***
+<h4>Upper() and lower() method</h4>
 
 Upper returns the ***copy** of a given string in all uppercase letters; while lower returns the copy of a given string in all lowercase letters.
 ```
@@ -291,7 +293,7 @@ i want to visit usa
 ```
 upper or lower method takes no arguments.
 
-***strip() method***
+<h4>strip() method</h4>
 
 this strip method returns the copy of a string by removing the ***whitespaces*** from before and after letters.
 
@@ -307,7 +309,7 @@ Well this is another line   !
 ```
 Notice, the whitespace between characters are not removed, only the before and after letters whitespaces are removed.
 
-***replace(oldstring, newstring) method***
+<h4>replace(oldstring, newstring) method</h4>
 
 the replace method replace every instance of oldstring with newstring in a string.
 ```
@@ -319,7 +321,7 @@ Output:
 ```
 we are here
 ```
-***split method***
+<h4> split method</h4>
 
 Split helps us breaking sentences of a string into more managable pieces.
 
@@ -357,7 +359,7 @@ Output:
 ```
 So, the split method won't include the delimeter in the list it returns.
 
-***join method***
+<h4>join method</h4>
 
 The inverse of the split method is join. We can choose a desired separator string, (often called the glue) and join the list with the glue between each of the elements.
 
