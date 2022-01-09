@@ -17,8 +17,7 @@ Hello! I am mouly
 Helloo! I am Mouly
 This is
 a multi line 
-string
-that we can write and we
+string and we
 call it "Doc-Strings" 
 ```
 we can use either single quotation or double quotation as long as we are consistant about which qutation we are using
