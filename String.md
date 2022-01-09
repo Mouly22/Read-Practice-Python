@@ -132,12 +132,18 @@ Strings are sequential collection datatype.This means a string is actually a col
 
 ***Indexing***
 
-We can access a sub-string or part of a string using the indexing operator.
-This operator is helpful for accessing a single character by it's position or ***index value***
-This index value for sequential collection datatypes always begins at ***zero***
+We can access a sub-string an individual character of a string or part of a string using the indexing operator.
+For accessing individual character by it's position or ***index value***. This index value always begins at ***zero***
+
+Indexing can be done in two ways:
+
+***Positive Indexing*** is used to access characters from the left side of a string and it always starts from 0 and ends at the last character of the string. 
+
+***Negative Indexing*** is used to access characters from the right side of a string and it starts from -1 and ends at the first character of the string.
+
 <img src=https://github.com/Mouly22/Read-and-Learn-Python/blob/main/string%20indexing.png  alt="String indexing " width="1000" height="400" align="center"/>
 
-For example, string with six character have entities from 0 through 5. So if we want to access a 5th character of a string we'll use an index of 4.
+***REMEMBER,*** A string with six characters have entities from 0 through 5. So if we want to access a 5th character of a string we'll use an index of 4.
 ```
 xmple = "we want to access"
 print(xmple[0])
