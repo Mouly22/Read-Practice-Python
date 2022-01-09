@@ -8,8 +8,8 @@ print("Hello! I am mouly")
 print('Helloo! I am Mouly')
 print('''This is
 a multi line 
-string
-that we can write and we
+string that we can write 
+and we
 call it "Doc-Strings" ''')
 ```
 Output:
