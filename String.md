@@ -30,7 +30,7 @@ Output:
 ```
 He was in the dead sea while listening 'Ocean Eyes'
 ```
-This qutation sequence can easily be maintained by using <h4>preceding backslash</h4> which is called an ***escape character***
+This qutation sequence can easily be maintained by using preceding backslash which is called as an ***escape character(\)***
 ```
 print('I manage because I have to. Because I\'ve no other way out')
 print("Don't you know,\"How can you ignore?\"")
