@@ -96,7 +96,7 @@ Output:
 ```
 TypeError: can only concatenate str (not "int") to str
 ```
-here, p is a string. Even though 5 happens to look like a number, in python it's just a sequence of characters and we can't add a number to a sequence of characters.
+Here, p is a string. Even though 5 happens to look like a number, in python it's just a sequence of characters and we can't add a number to a sequence of characters.
 we can add them if we cast this p string into an integer.
 ```
 p = "5"
@@ -140,10 +140,13 @@ Indexing can be done in two ways:
 ***Positive Indexing*** is used to access characters from the left side of a string and it always starts from 0 and ends at the last character of the string. 
 
 ***Negative Indexing*** is used to access characters from the right side of a string and it starts from -1 and ends at the first character of the string.
-
 <img src=https://github.com/Mouly22/Read-and-Learn-Python/blob/main/string%20indexing.png  alt="String indexing " width="1000" height="400" align="center"/>
 
 ***REMEMBER,*** A string with six characters have entities from 0 through 5. So if we want to access a 5th character of a string we'll use an index of 4.
+```
+The basic string indexing structure 
+```
+string_name[index_value]
 ```
 xmple = "we want to access"
 print(xmple[0])
