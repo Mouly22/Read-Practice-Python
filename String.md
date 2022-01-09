@@ -36,13 +36,13 @@ print('I manage because I have to. Because I\'ve no other way out')
 print("Don't you know,\"How can you ignore?\"")
 ```
 Output:
-```I manage because I have to. Because I've no other way out
+```
+I manage because I have to. Because I've no other way out
 Don't you know,"How can you ignore?"
 ```
-We can also make an ***empty string***
+An ***empty string*** also holds an indexing position
 ```
-p = " "                                       #empty string
-print(p)
+print(" ")                                                      #empty string
 ```
 Output:
 ```
