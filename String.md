@@ -214,7 +214,7 @@ e want t
 ```
 In this example,the colon used in this slicing operator will return the characters from index 1 upto index 8(so not including index 9) and the increment will be 1.
 <h4>String Operators</h4>
-<h3> Concatenation </h3>
+<h5> Concatenation </h5>
 We can ***concatenate*** strings by using the plus(+) sign.
 ```
 var1 = "we want"
@@ -228,7 +228,7 @@ Output:
 we want to visit a zoo
 ```
 Notice one thing, this + sign doesn't add any ***space*** while concatenating. 
-<h3>Repetition </h3>
+<h5>Repetition </h5>
 
 We can create a new string with the specified number of copies of the input string using this method.
 ```
