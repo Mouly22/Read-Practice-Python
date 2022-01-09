@@ -42,26 +42,14 @@ Don't you know,"How can you ignore?"
 ```
 An ***empty string*** also holds an indexing position
 ```
-print(" ")                                                      #empty string
+print(" ")                                     #empty string
+print(' ')
 ```
 Output:
 ```
 
-```
-We can ***concatenate*** strings by using the plus(+) sign.
-```
-var1 = "we want"
-var2 = "to visit a"
-var3 = "zoo"
-var =  var1 +" "+ var2 +" "+ var3             #concetenation of a string
-print(var)
-```
-Output:
-```
-we want to visit a zoo
-```
-Notice one thing, this + sign doesn't add any ***space*** while concatenating. 
 
+```
 ***type***
 
 this built-in fuction returns the type of an object
