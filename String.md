@@ -22,12 +22,14 @@ string
 that we can write and we
 call it "Doc-Strings" 
 ```
-<h5> we can use either single quotation or double quotation as long as we are consistant about which qutation we are using</h5>
+we can use either single quotation or double quotation as long as we are consistant about which qutation we are using
 ```
 print("He was in the dead sea while listening 'Ocean Eyes'")
 ```
 Output:
-```He was in the dead sea while listening 'Ocean Eyes' ```
+```
+He was in the dead sea while listening 'Ocean Eyes'
+```
 This qutation sequence can easily be maintained by using <h4>preceding backslash</h4> which is called an ***escape character***
 ```
 print('I manage because I have to. Because I\'ve no other way out')
