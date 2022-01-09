@@ -1,28 +1,41 @@
 <h2> String </h2>
 
-***Strings are what we use in python when working with words.*** 
+***String is a sequence of ordered characters (alphabets-lower case, upper case, numeric values, special symbols).*** 
 
-Strings are either enclosed with single quotes or double quotes.Also we can write multi line string using triple qutations(single and double both)
-So, we can use either single quotes or double quotes as long as we are consistant about which qutation we are using.
+Strings are either enclosed with single qutation marks('),double quotation marks(''). Also we can write multi line string using triple qutations(''', " " " both) The character order is always from left to right.
 ```
-my_name = "Hello! I am mouly"
-myy_name = 'Helloo! I am Mouly'
-x = '''this is
+print("Hello! I am mouly")
+print('Helloo! I am Mouly')
+print('''This is
 a multi line 
 string
-that we can write'''
-print(my_name)
-print(myy_name)
-print(x)
+that we can write and we
+call it "Doc-Strings" ''')
 ```
 Output:
 ```
 Hello! I am mouly
 Helloo! I am Mouly
-this is
+This is
 a multi line 
 string
-that we can write
+that we can write and we
+call it "Doc-Strings" 
+```
+<h5> we can use either single quotation or double quotation as long as we are consistant about which qutation we are using</h5>
+```
+print("He was in the dead sea while listening 'Ocean Eyes'")
+```
+Output:
+```He was in the dead sea while listening 'Ocean Eyes' ```
+This qutation sequence can easily be maintained by using <h4>preceding backslash</h4> which is called an ***escape character***
+```
+print('I manage because I have to. Because I\'ve no other way out')
+print("Don't you know,\"How can you ignore?\"")
+```
+Output:
+```I manage because I have to. Because I've no other way out
+Don't you know,"How can you ignore?"
 ```
 We can also make an ***empty string***
 ```
