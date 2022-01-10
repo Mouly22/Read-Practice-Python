@@ -50,6 +50,7 @@ Output:
 ```
 <h4> f-string </h4>
 f-strings are string literals called as “formatted string literals” that have an f at the beginning and curly braces containing expressions that will be replaced with their values. 
+
 ```
 wrd = 'looking'
 who ='kid'
