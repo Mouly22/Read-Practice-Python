@@ -359,7 +359,7 @@ Output:
 ```
 So, the split method won't include the delimeter in the list it returns.
 
-<h4>join method</h4>
+<h4>Join method</h4>
 
 The inverse of the split method is join. We can choose a desired separator string, (often called the glue) and join the list with the glue between each of the elements.
 
