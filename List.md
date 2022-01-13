@@ -13,6 +13,7 @@ A list can contain multiple datatypes even including a list in a single list.
 
 As list is mutable, we can access the items of list; we can add and remove value into an existing list.
 <h4> Index Operator </h4>
+
 ```
 lst = ['red','white','lavender','black']
 print(lst[2])
