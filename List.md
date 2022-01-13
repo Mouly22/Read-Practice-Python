@@ -48,7 +48,9 @@ Output:
 ['apollo', 'space shuttle', 'vostok', 'gemini', 'voskhod']
 ```
 <h4>Append function</h4>
+
 we can add items at the end of an existing list by using built-in append function.
+
 ```
 my_li = ["magic", 9.0, 8, [1,3,5]]  
 my_li.append('gilmore girls')
@@ -81,6 +83,7 @@ Output:
 TypeError: can only concatenate list (not "int") to list
 ```
 <h4>Length of a list</h4>
+
 To know the number of items in a list, we can use len()
 ```
 space_craft = ['apollo','space shuttle','vostok','soyuz','voskhod']
@@ -91,6 +94,7 @@ Output:
 5
 ```
 <h4>Looping through a list </h4>
+
 ```
 llyst = ['ping pong', 9.0, 'Pringles', 8, 'rain', [1, 3, 5], 'vostok']
 for i in llyst:
@@ -121,7 +125,9 @@ Output:
 0
 ```
 a list called lst being assigned to a list with one element, zero. Then, we see how n_lst is assigned the value associated with the first element of lst.
+
 <h4>List Slicing</h4>
+
 We can access a range of values in a list by using colon notation; this is called slicing. ***Remember,*** the ending value is exclusive in resulting list and slicing doesn't modify the content of original list.
 ```
 STRUCTURE: list_name[start(inclusive):end(exclusive):step(default 1)]
@@ -177,6 +183,7 @@ Output:
 ['Dairy milk', 'Kitkat', 'Harsheys', 'Cadbury']
 ```
 <h4>Access a list inside another list</h4>
+
 ```
 tlst = ['white', 2, ['Pringles', 'Kitkat', 'Coka-cola'], 'lavender']
 print(tlst[2][1])
@@ -186,6 +193,7 @@ Output:
 Kitkat
 ```
 <h4>Count method</h4>
+
 this method is useful for counting the occurances of a particular item in a list.
 ```
 lst = ["magic", 21, "snowball", [1,3,5], 3, "rain", [2, 4], "snowball", "lili" ]
@@ -197,6 +205,7 @@ Output:
 2
 ```
 <h4>sort method</h4>
+
 ```
 mlst_0 = ['bubble', 'dopamine', 'array', 'coronel', 'zem', 'lahore']
 mlst_0.sort()
@@ -207,6 +216,7 @@ Output:
 ['array', 'bubble', 'coronel', 'dopamine', 'lahore', 'zem']
 ```
 <h4>reverse method</h4>
+
 ```
 rlst = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong']
 rlst.reverse()
@@ -217,6 +227,7 @@ Output:
 ['ping pong', 'curling', 'track and field', 'softball', 'baseball', 'volleyball', 'football', 'cricket']
 ```
 <h4>insert method </h4>
+
 when we use append method, the new value adds in the last position of a list; but using insert method, we can specify index of the new value.
 ```
 mlst_1 = ['bubble', 'dopamine', 'array', 'coronel', 'zem', 'lahore']
@@ -230,6 +241,7 @@ Output:
 ```
 <h3> Removing elements from a list</h3>
 <h4>pop(index) method</h4>
+
 ```
 ths_0 = ['orange','space shuttle', 'track and field', 'curling', 'Coka-cola', 'Harsheys', 'vostok']
 ths_0.pop(2)
@@ -240,6 +252,7 @@ Output:
 ['orange', 'space shuttle', 'curling', 'Coka-cola', 'Harsheys', 'vostok']
 ```
 <h4>clear method</h4>
+
 ```
 ths_1 = ['orange','space shuttle', 'track and field', 'curling', 'Coka-cola', 'Harsheys', 'vostok']
 ths_1.clear()
@@ -250,6 +263,7 @@ Output:
 []
 ```
 <h4>remove(one argument)</h4>
+
 list.remove takes exactly one argument
 ```
 ths_3 = ['orange', 'pineapple', 'strawberry', 'banana']
@@ -261,6 +275,7 @@ Output:
 ['orange', 'pineapple', 'banana']
 ```
 <h4>index method</h4>
+
 for knowing the index of any argument of a list, we have to assign it into a new variable.It returns only the first occurance.
 ```
 klst = ['baseball', 'softball', 'track and field', 'array', 'coronel', 'curling', 'ping pong']
@@ -272,6 +287,7 @@ Output:
 2
 ```
 <h4>To make a copy of items of the list into a new list, we can use [:] operator </h4>
+
 ```
 my_lst = ['bubble','strawberry', 'dopamine', 'ping pong','coronel', 'zem']
 new_lst = my_lst[:]
