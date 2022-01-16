@@ -47,6 +47,7 @@ Output:
 <class 'tuple'>
 ```
 <h4>Immutability of Tuple </h4>:
+
 ```
 n_tup = ('rebert', 2009, [10, 'mango', 2.9], 'rebellion', 'ring')
 n_tup[1] = 2010
@@ -97,6 +98,7 @@ Output:
 Value assigned in the 4th position will be True.
 ```
 <h4>tuple indexing</h4>
+
 ```
 atup = ('major lazer', 'selena', 'ariana', 2013, 'swift', 'sarika')
 print(atup[1])
@@ -108,6 +110,7 @@ selena
 sakira
 ```
 <h4>  Tuple Slicing </h4>
+
 ```
 char = ('Triyon', 'Jon', 'Jaime', 'Sansa', 'Arya', 'Theon', 'Snow')
 print(char[1:6:2])
@@ -125,6 +128,7 @@ Output:
 ('Jaime', 'Sansa', 'Arya')
 ```
 <h4> Tuple Unpacking </h4>
+
 Although tuples are immutable(unchangable), 
 ```we can still change the items of a tuple by converting the tuple into a list```
  change the list, and then, convert the list back to the tuple.
