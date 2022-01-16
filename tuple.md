@@ -129,6 +129,5 @@ Output:
 ```
 <h4> Tuple Unpacking </h4>
 
-Although tuples are immutable(unchangable), 
-``` <h5> we can still change the items of a tuple by converting the tuple into a list </h5> ```
+Although tuples are immutable(unchangable), <h4> we can still change the items of a tuple by converting the tuple into a list </h4> 
  change the list, and then, convert the list back to the tuple.
