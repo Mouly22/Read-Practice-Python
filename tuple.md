@@ -137,6 +137,7 @@ Packing a tuple:
 We can also extract the values back into variables. this is called tuple "unpacking".
 
 Unpacking a tuple:
+
 ```
 stars = ('Sirius', 'Canopus', 'Vega', 'Rigel', 'Procyon')
 (c, d, a, f, e) = stars
@@ -149,6 +150,7 @@ Canopus
 a: Sirius b: Canopus c: Vega d: Rigel e: Procyon
 ```
 REMEMBER, The number of variables must match the number of values in the tuple, if not, you must use an asterisk(*) to collect the remaining values as a list.
+
 ```
 tup_1 = ("rain", "fall", "sun", "snow", "wind", "cry")
 (one, *two, last) = tup_1
