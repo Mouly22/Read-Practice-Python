@@ -165,6 +165,7 @@ Output:
 
 Although tuples are immutable(unchangable), we can still change the items of a tuple by ***converting the tuple into a list.***
 <h5>Change the list, and then, convert the list back to the tuple.</h5>
+
 ```
 ftup = ('bunny', 'herion', 'fan', 'van')
 convert_list = list(ftup) 
