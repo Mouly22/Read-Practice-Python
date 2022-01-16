@@ -46,7 +46,7 @@ Output:
 ('cherry', 'pingpong', 'hockey', 'basket', 'yellow', 'brown')
 <class 'tuple'>
 ```
-<h4>Immutability of Tuple </h4>:
+<h4>Immutability of Tuple: </h4>
 
 ```
 n_tup = ('rebert', 2009, [10, 'mango', 2.9], 'rebellion', 'ring')
