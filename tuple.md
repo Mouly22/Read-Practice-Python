@@ -129,5 +129,113 @@ Output:
 ```
 <h4> Tuple Unpacking </h4>
 
+when we create a tuple, we assign values to it. this is called "packing" a tuple:
+
+Packing a tuple:
+``` stars = ('Sirius', 'Canopus', 'Vega', 'Rigel', 'Procyon') ```
+
+We can also extract the values back into variables. this is called tuple "unpacking".
+
+Unpacking a tuple:
+```
+stars = ('Sirius', 'Canopus', 'Vega', 'Rigel', 'Procyon')
+(c, d, a, f, e) = stars
+print(d)
+print('a:', c, 'b:', d, 'c:', a, 'd:', f, 'e:', e)
+```
+Output:
+```
+Canopus
+a: Sirius b: Canopus c: Vega d: Rigel e: Procyon
+```
+REMEMBER, The number of variables must match the number of values in the tuple, if not, you must use an asterisk(*) to collect the remaining values as a list.
+```
+tup_1 = ("rain", "fall", "sun", "snow", "wind", "cry")
+(one, *two, last) = tup_1
+print(two)
+```
+Output:
+```
+['fall', 'sun', 'snow', 'wind']
+```
+<h4> Changing the value of tuple </h4>
+
 Although tuples are immutable(unchangable), we can still change the items of a tuple by ***converting the tuple into a list.***
 <h5>Change the list, and then, convert the list back to the tuple.</h5>
+```
+ftup = ('bunny', 'herion', 'fan', 'van')
+convert_list = list(ftup) 
+convert_list[1] = 'fire'
+new_tuple = tuple(convert_list)
+print(new_tuple)
+```
+Output:
+```
+('bunny', 'fire', 'fan', 'van')
+```
+<h4> Tuple concetenation </h4>
+
+```
+tup =('cherry', 'pingpong', 'hockey') + ('Sansa', 'Arya', 'Theon', 'Snow')
+print(tup)
+```
+Output:
+```
+('cherry', 'pingpong', 'hockey', 'Sansa', 'Arya', 'Theon', 'Snow')
+```
+<h4> Looping through a tuple </h4>
+
+```
+l_tup = ("Julia", "Duplicity", 2009, "Actress", "Atlanta",1920,  "Georgia")
+for i in l_tup:
+    print(i)
+```
+Output:
+```
+Julia
+Duplicity
+2009
+Actress
+Atlanta
+1920
+Georgia
+```
+<h4> Length of a tuple </h4>
+
+```
+t_ttup = ('Jon', 300, 'Duplicity', 200, 'Jaime', 1520, 'Sansa')
+print(len(t_ttup))
+```
+Output:
+```
+7
+```
+<h4> Enumerate() </h4>
+
+An enumerator function adds a counter of iterable numbers to the provided data structure of integers, characters or strings and many more.The data structure might be any list, tuple, dictionary or sets. If the counter is not provided by the user, then it starts from 0 by default. Based on the number provided the enumerator function iterates.
+
+Syntax: ``` enumerate(iterable, start) ```
+
+Note: The iterable must be an object that supports iteration.
+
+```
+nup = ['rain', 'rain', 'go', 'away']
+enum = enumerate(nup)
+now_tup = tuple(enum)
+print(now_tup)
+```
+Output:
+```
+((0, 'rain'), (1, 'rain'), (2, 'go'), (3, 'away'))
+```
+```
+nup = ['rain', 'rain', 'go', 'away']
+enum = enumerate(nup, 3)
+now_tup = tuple(enum)
+print(now_tup)
+```
+Output:
+```
+((3, 'rain'), (4, 'rain'), (5, 'go'), (6, 'away'))
+```
+
