@@ -149,6 +149,7 @@ Output:
 Canopus
 a: Sirius b: Canopus c: Vega d: Rigel e: Procyon
 ```
+
 REMEMBER, The number of variables must match the number of values in the tuple, if not, you must use an asterisk(*) to collect the remaining values as a list.
 
 ```
