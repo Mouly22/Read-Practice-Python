@@ -1,3 +1,5 @@
+<h2> Dictionary </h2>
+
 A dictionary is an unordered collection that consists of ​key-value​ pairs. Dictionaries are bounded by curly braces and have a list of ​key: value ​pairs which are separated by comma (,)
 
 ```
