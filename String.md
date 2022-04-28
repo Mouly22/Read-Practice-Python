@@ -253,7 +253,8 @@ repeat4timerepeat4timerepeat4timerepeat4time
 ```
 <h4>Built-in methods</h4>
 
-***It's important to remember that, Python is IMMUTABLE.*** Immutable means once it has been created its value cannot be changed.
+***It's important to remember that, Python is IMMUTABLE.*** 
+Immutable means once it has been created its value cannot be changed.
 So, each time we have to modify the values, we need to make a copy of the original one and make changes to the duplicate one.
 ```
 me = "Abira"
