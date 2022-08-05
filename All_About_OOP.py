@@ -1,6 +1,9 @@
-#line 116, 152, 
+#line 353, 324, 116, 152, 
 
 #ekta class hocche chosmar frame er blueprint, er ei blueprint theke amra infinity number er chosma banaite parbo. So, ekta chosma holo ekta object.
+from types import MemberDescriptorType
+
+
 class Personal_info():
     def __init__(self):
         print('We are writing on the \'init\' method hehe.')
@@ -262,11 +265,6 @@ class House:
         h3 = House(n_door, n_window)
         return h3
 
-
-
-
-
-
 h1 = House(2,6)
 h2 = House(1,4)
 h1.view()
@@ -274,8 +272,148 @@ h2.view()
 h3 = h1 + h2
 h3.view()
 
+class School:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def printinfo(self):
+        print(f'{self.name} is {self.age} years old.')
+
+b1 = School('Rouja', 5, 'Female')
+b1.printinfo()
+print(b1.name)
+print(b1.gender)         #these are public variables as we can access them from outside of the class.
+
+#However, .__variable makes a 'private' variable and we can access it only within the class but not outside of the class.
+class School:
+    def __init__(self, name, age, gender):
+        self.__name = name
+        self.age = age
+        self.gender = gender
+    
+    def printinfo(self):
+        print(self.__name)                 #we can access it from here as it is within the class.
+        #print(f'{self.__name} is {self.age} years old.')
+
+b1 = School('Rouja', 5, 'Female')
+b1.printinfo()
+#print(b1.__name)                  #AttributeError: 'School' object has no attribute '__name'. 
+print(b1.gender)                   #we still can access it as it is a public class
+
+#ALSO**,
+
+class School:
+    def __init__(self, name, age, gender):
+        self.__name = name
+        self.age = age
+        self.gender = gender
+    
+    def __printinfo(self):         
+        print(self.__name)               
+       
+
+b1 = School('Rouja', 5, 'Female')
+#b1.printinfo()
+#print(b1.__name)               
+print(b1.gender)
+#output: AttributeError: 'School' object has no attribute 'printinfo'. so if we make a method private, we also can not access it from outside of the class.
+#however, we need to see what exactly happened to this private method.
+print(dir(b1))
+#output:
+#['_School__name', '_School__printinfo', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'age', 'gender']
+#Here we can see that, python has changed the private method and variable to _class__variable name.
+#So, in python, it is pertially possible to achieve private methods and variables.
+
+class Family:
+    def __init__(self):
+        self.cousins = 'Mouly'
+        self.age = 22
+
+    def show_members(self):
+        print(f'{self.cousins} is {self.age} years old.')
+
+m1 = Family()
+m2 = Family()
+m1.show_members()
+
+#==================
+class Friends:
+    def __init__(self):
+        self.obj = Family()
+
+    def showw(self):
+        print(self.obj.cousins)
+
+f2 = Friends()
+f2.showw()
+#===============
+#We can use one class as an object of another class like the above.
+
+class School:
+    def __init__(self, name, id, age, gender):
+        self.name = name
+        self.__id = id
+        self.age = age
+        self.gender = gender
+    
+    def printinfo(self):
+        print(f'{self.name}\'s ID is {self.__id} and she is {self.age} years old.')
+
+    def update_id(self, id):
+        if id > 0:
+            self.__id = id
+        else:
+            print('Invalid id. Enter id again.')
+    
 
 
+b1 = School('Rouja', 2001010, 5, 'Female')
+b1.printinfo()
+#print(b1.__id)        # 'School' object has no attribute '__id' (we are protecting id from the outside of the class.)
+b1.__id = 33           #we can not update this id from the outside of the class.
+b1.printinfo()         #Rouja's ID is 2001010 and she is 5 years old.
+print(b1.__dict__)     #{'name': 'Rouja', '_School__id': 2001010, 'age': 5, 'gender': 'Female', '__id': 33}
+b1.update_id(21)
+b1.printinfo()         #Rouja's ID is 21 and she is 5 years old.
+
+#There is a set-get method for updating anything in oop.
+
+class School:
+    def __init__(self, name, id, age, gender):
+        self.name = name
+        self.__id = id
+        self.age = age
+        self.gender = gender
+    
+    def printinfo(self):
+        print(f'{self.name}\'s ID is {self.__id} and she is {self.age} years old.')
+
+    def set_id(self, id):
+        if id > 0:
+            self.__id = id
+        else:
+            print('Invalid id. Enter id again.')
+    def get_id(self):
+        return(f'ID is {self.__id}')
+    
 
 
+b1 = School('Rouja', 2001010, 5, 'Female')
+b2 = School('Fatema',201432, 12, 'female') 
+b1.printinfo()        
+b1.set_id(34)
+b2.set_id(55555)
+#print(b1.get_id())
+b1.printinfo() 
+#print(b2.get_id())
+b2.printinfo() 
+#ekhane method er through ami id k nilam and access korlam.
+
+#output:
+# Rouja's ID is 21 and she is 5 years old.
+# Rouja's ID is 2001010 and she is 5 years old.
+# Rouja's ID is 34 and she is 5 years old.
+# Fatema's ID is 55555 and she is 12 years old.
 
