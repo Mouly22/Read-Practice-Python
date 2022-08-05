@@ -233,6 +233,48 @@ print(str1 + str2)
 
 
 
+class data:
+    def __init__(self, x):
+        self.x = x
+
+    def __eq__(self, other):
+        if self.x == other.x:
+            return('Both are equal')
+        else:
+            return("not equal")
+
+
+val1 = data(30)
+val2 = data(30)
+print(val1 == val2)
+
+class House:
+    def __init__(self, door, window):
+        self.door = door
+        self.window = window
+
+    def view(self):
+        print(f'The house has {self.door} door(s) and {self.window} window(s)')
+
+    def __add__(self, other):
+        n_door = self.door + other.door
+        n_window = self.window + other.window
+        h3 = House(n_door, n_window)
+        return h3
+
+
+
+
+
+
+h1 = House(2,6)
+h2 = House(1,4)
+h1.view()
+h2.view()
+h3 = h1 + h2
+h3.view()
+
+
 
 
 
