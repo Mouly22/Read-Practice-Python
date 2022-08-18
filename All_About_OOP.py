@@ -417,3 +417,248 @@ b2.printinfo()
 # Rouja's ID is 34 and she is 5 years old.
 # Fatema's ID is 55555 and she is 12 years old.
 
+#Class/Static variable
+class Team:
+    team_run = 0
+    def __init__(self, run):
+        self.run = run
+        
+
+    def run_four(self):
+        self.run += 4
+        Team.team_run += 4
+
+    def run_six(self):
+        self.run += 6
+        Team.team_run += 6
+   
+
+sakib = Team(0)
+tamim = Team(0)
+tamim.run_four()
+sakib.run_six()
+tamim.run_six()
+print(tamim.__dict__)
+print(f'Tamim\'s run:{tamim.run}')
+print(f'Sakib\'s run: {sakib.run}')
+print(Team.team_run)
+
+
+class College:
+    student = 20
+    ChangeCollege = "AHC"
+    def __init__(self, name, id
+    ):
+        self.name = name
+        self.id = id
+        College.ChangeCollege = "VINC"
+        College.student += 1
+
+    def printDetails(self):
+        print(f'Name: {self.name} ID: {self.id}')
+        print(College.student)
+
+    @classmethod
+    def change(cls):
+        return(cls.ChangeCollege)
+
+print('=========================================')
+print(College.ChangeCollege)
+print(f"first{College.student}")
+m1 = College('mouly', 20101539)
+m2 = College('fahad', 21301576)
+m2.printDetails()
+print(College.student)
+print(College.ChangeCollege)
+print(College.change())
+
+
+#ekta classmethod k without creating any method call dite parbo, karon classmethod kono method er upore depend kore na.
+class Degree:
+    uni_name = 'BRACU'
+    def __init__(self, dept):
+        self.dept = dept
+
+    @classmethod
+    def info(cls):
+        return cls.uni_name
+
+    def Detail(self):
+        print(f'The department is {self.dept}')
+
+    
+print('======================')
+print(Degree.info())
+obj1 = Degree('CSE')
+print(obj1.info())
+print(obj1.Detail())
+#print(Degree.Detail())
+
+class Random:
+    def __init__(self, dice1, dice2):
+        self.dice1 = dice1
+        self.dice2 = dice2
+        self.mul = 0
+
+    @classmethod
+    def multiple(cls):
+        cls.mul = 20
+        return(cls.mul)
+
+    def multi(self):
+        self.mul = self.dice1 * self.dice2
+    
+
+    def detail(self):
+        print(f'Result is {self.mul}')
+
+print('===============================')
+print(f'Class method {Random.multiple()}')
+m1 = Random(3, 5)
+m2 = Random(2, 6)
+m1.multi()
+m2.multi()
+m2.detail()
+#Static method=============
+class classroom:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def number_of_student():
+        print('There are 23 students.')
+
+classroom.number_of_student()
+
+class Difference:
+    def __init__(self, name):
+        self.name = name
+      
+
+    def instancemethod(self, gender):
+        self.gender = gender
+        return self.gender
+    
+    @classmethod
+    def classmethod(cls, age):
+        cls.age = age
+        
+        return cls.age
+
+    @staticmethod
+    def staticmethod():
+        return('I don\'t know how to take any value with it.')
+
+print('=====================================')
+print(Difference.staticmethod())
+print(Difference.classmethod(19))
+obj_1 = Difference('rosita')
+print(obj_1.instancemethod('female'))
+print(Difference.classmethod(20))
+print(Difference.staticmethod())
+
+#--------------------------------------------------------------------------
+
+#classmethod can help me update any common variable for every method in a class
+class INFO:
+    uni = 'BRACU'
+    def __init__(self, name, id, uni):
+        self.name = name
+        self.id = id
+        self.uni = uni
+    
+    @classmethod
+    def update_uni(cls, uni):
+        cls.uni = uni
+
+    def printDetail(self):
+        print(f'Name: {self.name} ID: {self.id} University: {self.uni}')
+        print(f'Name: {self.name} ID: {self.id} University: {INFO.uni}')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+m1 = INFO('gerry', 2104, 'NYU')
+m2 = INFO('pablo', 2345, 'EWU')
+m1.printDetail()
+m2.printDetail()
+INFO.update_uni('BRAC University')
+m2.printDetail()
+
+#OUTPUT:
+# Name: gerry ID: 2104 University: NYU
+# Name: gerry ID: 2104 University: BRACU
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Name: pablo ID: 2345 University: EWU
+# Name: pablo ID: 2345 University: BRACU
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Name: pablo ID: 2345 University: EWU
+# Name: pablo ID: 2345 University: BRAC University
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#ekhane sikhlam j, self diye jemon instance info k update kora jay, temon classmethod diye shudhu class variable k update kora jay.
+#jodi class variable na thake, then amra class method diye print korte parleo update korte parbona.
+
+class University:
+    cls_name = 'ROBU'
+
+    def __init__(self, name, idd):
+        self.name = name
+        self.idd = idd
+
+    def printDetail(self):
+        print(f'Name: {self.name} ID: {self.idd}')
+
+    @classmethod
+    def string(cls, vals):
+        name, idd = vals.split('-')
+        obj = cls(name, idd)
+        return obj
+
+m1 = University('Mouly', 20101539)
+m3 = University.string('Fahad-21301576')
+m1.printDetail()
+m3.printDetail()
+#====================================================================
+class honour:
+    def __init__(self, name, medal):
+        self.name = name
+        self.medal = medal
+
+    def view(self):
+        print(f'Name: {self.name} Medal: {self.medal}')
+
+    @classmethod
+    def convert(cls, val):
+        name, medal = val.split('-')
+        obj = cls(name, medal)
+        return obj
+
+s1 = honour('Gold', 2)
+s2 = honour.convert('Bronze-1') #it is the most important line here.
+s1.view()
+s2.view()
+#====================================================================
+#Staticmethod: eta basically ekta utility er moto kaj kore, eta direct kono value recieve korbe, etar maddhome amra emon kono kaj korbo na jeita self or cls er sathe related.
+class LearningRate:
+    def __init__(self, name, id, s_hr):
+        self.name = name
+        self.id = id
+        self.s_hr = s_hr
+
+    def printDetails(self):
+        print(f'{self.s_hr}')
+
+    @staticmethod
+    def compare(s_hr):
+        if s_hr >= 5:
+            print('Keep going')
+        elif s_hr < 4:
+            print('Not good enough')
+        else:
+            print('Hopeless')
+print('====================')
+LearningRate.compare(2)
+print('====================')
+
+    
+
+
+
