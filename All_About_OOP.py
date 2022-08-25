@@ -658,7 +658,100 @@ print('====================')
 LearningRate.compare(2)
 print('====================')
 
+#this is inheritance, the babyclass is inheriting all the properties(variables, methods) of the parentclass.
+class parentclass:
+    def __init__(self):
+        print('parent consturctor')
+    def method1(self):
+        print('Method 1')
+    def method2(self):
+        print('Method 2')
+class babyclass1(parentclass):     #this is most important
+    def __init__(self):
+        print('Babyclass1 consturctor')
+    def method3(self):
+        print('Method 3')
+
+class babyclass2(parentclass):
+    def __init__(self):
+        print('Babyclass2 consturctor')
+    def method4(self):
+        print('Method 4')
     
+class grandchild(babyclass1, babyclass2):
+    def __init__(self):
+        super().__init__()
+        print('Grandchild consturctor')
+    def method5(self):
+        print('Method 5')
+
+
+p = grandchild()
+p.method1()
+p.method3()
+p.method5()
+print('#####################################')
+
+#output:
+# Babyclass1 consturctor
+# Grandchild consturctor
+# Method 1
+# Method 3
+# Method 5
+
+class Student:
+    def __init__(self, name, Id):
+        self.name = name
+        self.id = Id
+
+    def details(self):
+        print(f'Name: {self.name} ID: {self.id}')
+
+class CSEStudent(Student):
+    def __init__(self, name, Id, labs):
+        super().__init__(name, Id)
+        self.no_of_labs = labs
+
+    def labs(self):
+        print(f'Mouly cries the whole day because of {self.no_of_labs} labs.')
+
+class BBAStudent(Student):
+    def party(self):
+        print("party All DAY!")
+b1 = CSEStudent('Mouly', 20101539, 3)
+b2 = BBAStudent('Esha', 24138533)
+b1.details()
+b1.labs()
+b2.details()
+b2.party()
+print('#############################################################################')
+
+class University:
+    def __init__(self, name, ID, age):
+        self.name = name
+        self.ID = ID
+        self.age = age
+        self.wealth = 0.00
+
+    def life_motto(self):
+        print('Work Honestly')
+
+class Student(University):
+    def __init__(self, name, ID, age, gender):
+        super().__init__(name, ID, age)
+        self.gender = gender
+        self.wealth = 1000.0
+
+    def life_motto(self):
+        super().life_motto()
+        print('Work Smartly')
+        print(self.wealth)
+
+c1 = Student('Fahad', 21301576, 21, 'male')
+c1.life_motto()
+print('#############################################################################')
+
+
 
 
 
